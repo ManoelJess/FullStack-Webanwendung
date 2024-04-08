@@ -1,0 +1,228 @@
+.myBar{
+  margin-top: -35px;
+  display: flex;
+  padding: 15px;
+  justify-content: flex-end;
+  background: #f4f7fa;
+  gap: 2rem;
+}
+.fa-compress, .fa-moon, .fa-expand{
+  cursor: pointer;
+}
+.fa-moon{
+  font-size: 2.3em;   
+}
+.dark-mode{
+  background-color: #222;
+  color: #fff;
+}
+.dark-mode .myBar {
+  background-color: #333;
+}
+
+.card .select{
+  font-size: 20px;
+  display:flex ;
+  justify-content: flex-end;
+}
+.chart_Type{
+  text-align: center;
+  padding: 4px;
+  margin: 2.7px 5px 0 0;
+}
+.select select{
+  border: red 1px #444;
+  border-radius: 5px;
+  width: 7.025em;
+  margin: 4px;
+  padding: 3.1px;
+  margin-right: 10em;
+  cursor: pointer;
+}
+.custom_ttle{
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+  font-style: italic;
+}
+.fa-box-open {
+  font-size: 2em; /* Ajustez la taille selon vos besoins */
+  margin-right: 10px;
+  padding: 20px;
+}
+.fa-money-bill-wave{
+  font-size: 2em; /* Ajustez la taille selon vos besoins */
+  margin-right: 10px;
+  padding: 20px;
+}
+.fa-bag-shopping{
+  font-size: 2.3em; /* Ajustez la taille selon vos besoins */
+  margin-right: 10px;
+  padding: 15px;
+}
+
+.Menu-option{
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Menu-option .filter_dropdown{
+    cursor: pointer;
+   
+}
+.dropdown{
+        position: relative;
+        display: inline-block;
+}
+.date-content{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.date{
+    border: #939393 solid .3px;
+    
+}
+.dropdown button{
+    border: none;
+}
+label {
+  display: block;
+  font:
+    1rem 'Fira Sans',
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    border: 1px solid none;
+    z-index: 1;
+}
+.dropdown-content span{
+    display: block;
+
+    cursor: pointer;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+.mt-4 .btn{
+    margin: 5px;
+    width: 80px;
+    font-size: 20px;
+    text-align: center;
+}
+.mt-4 .value{
+    font-size: 20px;
+}
+
+.customer-question{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+.customer-chart {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px
+}
+
+
+
+.customer-question .customer-list{
+    width: 100%;
+}
+.customer-title{
+    text-align: center;
+    font-weight: 700;
+    border: .3 solid black;
+}
+
+.widget-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .widget {
+    width: 325px;
+    height: 175px;
+    background-color: #fff;
+    color: #fff;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 15px 15px 15px #939393;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  .widget.green {
+    background-color: rgba(4, 67, 66, .7);
+  }
+  
+  .widget.yellow {
+    background-color: rgba(237, 158, 32, .8);
+  }
+  
+  .widget.red {
+    background-color: rgba(126, 5, 5, .7);
+  }
+  
+  .widget.blue {
+    background-color: rgba(105, 32, 251, .8);
+  }
+  
+  .table-container {
+    max-height: 300px; /* Set a fixed height for the container */
+    overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+  }
+  
+  .table {
+    width: 100%; /* Ensure the table takes full width of its container */
+  }
+  .head_table thead tr th{
+    background-color: cadetblue ;
+  }
+  .btn-primary{
+    background-color: cadetblue;
+    border-radius: 50%;
+  }
+  .date-contentOrd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media only screen and (max-width: 1600px) {
+    .widget {
+      width: 300px;
+    }
+  }
+  
+  @media only screen and (max-width: 1500px) {
+    .widget {
+      width: 275px;
+    }
+  }
+  
+  @media only screen and (max-width: 1400px) {
+    .widget {
+      width: 250px;
+    }
+  }
+  
+  @media only screen and (max-width: 1200px) {
+    .widget {
+      width: 225px;
+    }
+  }

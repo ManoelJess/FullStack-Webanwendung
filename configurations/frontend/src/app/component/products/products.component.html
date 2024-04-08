@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <div class="chart-contain">
+       
+    <div class="pi-chart"> 
+      <div>
+        <p class="tilt">Produkt List nach Container</p>
+      </div>     
+      <p-chart type="pie" [data]="dateContainerCounts" ></p-chart> 
+           
+    </div>
+
+    <div class="bar-chart">
+      <div>
+        <p class="tilt">display items according to price</p>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn" (click)="dropdownbtn()">display by 
+          <i  *ngIf="!status" class="fa-solid fa-caret-down"></i> 
+          <i *ngIf="status" class="fa-solid fa-caret-up"></i> 
+        </button>
+        <div class="dropdown-content" [ngClass]="{'show': status}" (mousemove)="status">
+          <a (click)="filterProducts('price')">Preis</a>
+          <a  (click)="filterProducts('size')">Größe</a>
+        </div>
+      </div>   
+        <p-chart type="bar"  [data]="dataSizePrice" ></p-chart>           
+            
+      
+    </div>
+  </div>  
+         
+      
+</body>
+</html>

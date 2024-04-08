@@ -1,0 +1,62 @@
+{
+    "LANGUAGE": {
+        "de": "Sprache",
+        "en": "Language",
+        "fr": "Langue",
+        "es": "Idioma"
+    },
+    "LANGUAGE_DE": {
+        "de": "Deutsch",
+        "en": "Englisch",
+        "fr": "Französich",
+        "es": "Spanisch"
+    },
+    "LANGUAGE_EN": {
+        "de": "German",
+        "en": "Englisch",
+        "fr": "French",
+        "es": "Spanish"
+    },
+    "LANGUAGE_FR": {
+        "de": "Allemand",
+        "en": "Anglais",
+        "fr": "Francais",
+        "es": "Espagnol"
+    },
+    "LANGUAGE_ES": {
+        "de": "Alemán",
+        "en": "Inglés",
+        "fr": "Francés",
+        "es": "Español"
+    },
+    "DETAILS_LABEL_INFO": {
+        "de": "Information",
+        "en": "Information",
+        "fr": "Information",
+        "es": "Información"
+    },
+    "DETAILS_SAVING": {
+        "de": "Speichern",
+        "en": "Saving",
+        "fr": "Sauvegarder",
+        "es": "Guardando"
+    },
+    "DETAILS_SAVE_SUCCESFULL": {
+        "de": "Speichern erfolgreich",
+        "en": "Saving successfully",
+        "fr": "Sauvegarder avec succes",
+        "es": "Guardando correctamente"
+    },
+    "DETAILS_ERROR_ON_SAVE": {
+        "de": "Fehler beim Speichern",
+        "en": "Save not successful",
+        "fr": "Sauvegarde a echoue",
+        "es": "Error al guardar"
+    },
+    "CLICK_MESSAGE": {
+        "de": "Hier Clicken",
+        "en": "Click",
+        "fr": "Cliquez ici",
+        "es": "Pulse aquí"
+    }
+}

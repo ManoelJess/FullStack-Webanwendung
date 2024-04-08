@@ -1,0 +1,98 @@
+.card1{
+    display: flex;
+}
+
+.card3{
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.preis_chart{
+    align-self: flex-end;
+    background-color: aquamarine;
+}
+.chart-contain{
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+}
+.chart-contain .bar-chart{
+    width: 100%;
+    height: inherit;
+}
+.tilt{
+    text-align: center;
+    font-weight: 600;
+    font-size: 30px;
+    padding: 10px;
+    margin: 15px 0;
+}
+.pi-chart{
+    border-right: #555 solid 1px;
+}
+.bar-chart .sortN{
+    margin-left:5rem;
+    list-style: none;
+    border: .5px solid #555;
+    display: flex;
+    align-items: center;
+    align-self: left;
+    width: 10em;
+    cursor: pointer;
+    justify-content: space-between;
+    padding: 2px 5px;
+}
+.one{
+    margin-top:1.5rem;
+}
+.bar-chart .sortN ul{
+    list-style: none;
+}
+.bar-chart .sortN ul li:first-child{
+    border-bottom: .5px solid #555;    
+}
+
+.dropdown {
+    margin-left: 5rem;
+    position: relative;
+    display: inline-block;
+    min-width: 160px;
+  }
+  
+  .dropbtn {
+    background-color: cadetblue;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(168, 30, 30, 0.512);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    cursor: pointer;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  .show {
+    display: block;
+  }
+  

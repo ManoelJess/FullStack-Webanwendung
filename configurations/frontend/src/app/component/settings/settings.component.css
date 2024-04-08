@@ -1,0 +1,37 @@
+.mySetting{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 35px;
+}
+
+.set{
+    width: 500px;
+    height: 300px;
+    background-color: lightblue;
+    margin: 10px; /* Ajout de marges entre les éléments */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.subSet{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 15px;
+}
+ div select {
+    width: 200px;
+    font-size: 30px;
+    font-style: italic;
+ }
+ div select,
+ div select option {
+    height: 40px;
+ }
+ .tilt p{
+    font-size: 30px;
+ }

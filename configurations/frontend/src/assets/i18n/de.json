@@ -1,0 +1,38 @@
+{
+    "nav": {
+      "title": "GruppeN",
+      "dashboard": "Dashboard",
+      "products": "Produkte",
+      "contact": "Kontakt"
+    },
+    "language": {
+        "germanFlag": "Deutsche Flagge",
+        "englishFlag": "Englische Flagge"
+      },
+      "dashboard": {
+        "card1Title": "Gesamteinnahmen",
+        "card2Title": "Einnahmen Letzten Monat",
+        "card3Title": "Einnahmen Letztes Jahr",
+        "card4Title": "Erwartete Einnahmen Nächstes Jahr"
+      },
+      "chart": {
+        "line": "Linie",
+        "bar": "Balken",
+        "pie": "Kuchen",
+        "customerTotalRevenue": "Kunden mit Gesamteinnahmen"
+      },
+      "customer": {
+        "listTitle": "Unsere Kundenliste",
+        "table": {
+          "name": "Name",
+          "number": "Nummer",
+          "address": "Adresse"
+        }
+      },
+      "customerChart": {
+        "bestCustomers": "Beste Kunden",
+        "mostOrderedCustomers": "Meistbestellte Kunden",
+        "startDate": "Startdatum:",
+        "endDate": "Enddatum:"
+      }
+  }

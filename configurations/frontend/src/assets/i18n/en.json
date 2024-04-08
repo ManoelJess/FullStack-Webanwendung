@@ -1,0 +1,39 @@
+{
+    "nav": {
+      "title": "GroupeN",
+      "dashboard": "Dashboard",
+      "products": "Products",
+      "contact": "Contact"
+    },
+    "language": {
+        "germanFlag": "German Flag",
+        "englishFlag": "English Flag"
+      },
+      "dashboard": {
+        "card1Title": "Overall Revenue",
+        "card2Title": "Last Month Revenue",
+        "card3Title": "Last Year Revenue",
+        "card4Title": "Expected Next Year Revenue"
+      },
+      "chart": {
+        "line": "Line",
+        "bar": "Bar",
+        "pie": "Pie",
+        "customerTotalRevenue": "Customers with Total Revenue"
+      },
+      "customer": {
+        "listTitle": "Our Customer List",
+        "table": {
+          "name": "Name",
+          "number": "Number",
+          "address": "Address"
+        }
+      },
+      "customerChart": {
+        "bestCustomers": "Best Customers",
+        "mostOrderedCustomers": "Most Ordered Customers",
+        "startDate": "Start Date:",
+        "endDate": "End Date:"
+      }
+
+  }

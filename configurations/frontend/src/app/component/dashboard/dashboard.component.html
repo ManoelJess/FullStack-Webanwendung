@@ -1,0 +1,170 @@
+<div class="myBar" [ngClass]="{'dark-mode': darkMode}">
+  <div class="h2 mb-0" (click)="toggleFullScreen()">
+    <i *ngIf="isExpanded" class="fa-solid fa-expand" style="color: cadetblue;"></i>
+    <i *ngIf="!isExpanded" class="fa-solid fa-compress" style="color: cadetblue;"></i>
+  </div>
+  <div class="h2 mb-0">
+    <img *ngIf="!isEnglish" src="assets/images/Deutsch.png" (click)="changeLanguage('de')" alt="{{ 'language.germanFlag' | transloco }}" style="width: 25px;">
+    <img *ngIf="isEnglish" src="assets/images/English.png" (click)="changeLanguage('en')" alt="{{ 'language.englishFlag' | transloco }}" style="width: 25px;">
+  </div>
+  <div class="h2 mb-0">
+    <i class="fa-solid fa-battery-full" style="color: cadetblue;"></i>
+  </div>
+  <div (click)="toggleDarkMode()">
+    <i *ngIf="darkMode" class="fa-regular fa-moon"></i>
+    <i *ngIf="!darkMode" class="fa-solid fa-moon"></i>
+  </div>
+</div>
+<div class="widget-container" [ngClass]="{'dark-mode': darkMode}">
+  <div class="widget green">
+      <div class="icon">
+        <i class="fa-solid fa-money-bill-wave"></i>
+      </div>
+      <div class="value">
+          <div class="top"> <strong>{{overalrevenue}} €</strong></div>
+          <div class="botom">{{ 'dashboard.card1Title' | transloco }}</div>
+      </div>
+  </div>
+  <div class="widget yellow">
+      <div class="icon">
+        <i class="fa-solid fa-bag-shopping"></i>
+      </div>
+      <div class="value">
+          <div class="top"> <strong>{{lastMonthRevenue}} €</strong> </div>
+          <div class="botom">{{ 'dashboard.card2Title' | transloco }}</div>
+      </div>
+  </div>
+  <div class="widget red">
+      <div class="icon">
+        <i class="fa-solid fa-money-bill-wave"></i>
+      </div>
+      <div class="value">
+          <div class="top"> <strong>{{lastYearRevenue}} €</strong></div>
+          <div class="botom">{{ 'dashboard.card3Title' | transloco }}</div>
+      </div>
+  </div>
+  <div class="widget blue">
+      <div class="icon">
+        <i class="fa-solid fa-money-bill-wave"></i>
+      </div>
+      <div class="value">
+          <div class="top"><strong>{{nextYearRevenue}} €</strong></div>
+          <div class="botom">{{ 'dashboard.card4Title' | transloco }}</div>
+      </div>
+  </div>
+</div>
+<div class="kunden-chart" [ngClass]="{'dark-mode': darkMode}">
+  <div class="card">
+    <div class="select" (change)="onChartTypeChange($event)" [ngClass]="{'dark-mode': darkMode}">
+      <select [(ngModel)]="selectedChartType" [ngClass]="{'dark-mode': darkMode}">
+        <option value="line">{{ 'chart.line' | transloco }}</option>
+        <option value="bar">{{ 'chart.bar' | transloco }}</option>
+        <option value="pie">{{ 'chart.pie' | transloco }}</option>
+      </select>
+    </div>
+    <div class="card-body" [ngClass]="{'dark-mode': darkMode}">
+      <h5 class="card-title">{{ 'chart.customerTotalRevenue' | transloco }}</h5>
+      <canvas id="CustomersChart"></canvas>
+    </div>
+  </div>
+</div>
+
+
+  <div class="customer-question" [ngClass]="{'dark-mode': darkMode}">
+
+    <div class="customer-list" [ngClass]="{'dark-mode': darkMode}">
+      <div class="card customer-title" [ngClass]="{'dark-mode': darkMode}">
+        <h3>{{ 'customer.listTitle' | transloco }}</h3>
+      </div>  
+      <div [ngClass]="{'dark-mode': darkMode}">
+        <table class="table table-container head_table" >
+          <thead class="thead-dark ">
+            <tr [ngClass]="{'dark-mode': darkMode}">
+              <th scope="col">#</th>
+              <th scope="col">{{ 'customer.table.name' | transloco }}</th>
+              <th scope="col">{{ 'customer.table.number' | transloco }}</th>
+              <th scope="col">{{ 'customer.table.address' | transloco }}</th>
+            </tr>
+          </thead>
+        </table> 
+      </div> 
+      <div class="table-container card">
+        <table class="table table-container">
+          <thead class="thead-dark table-dark">
+          </thead>
+          <tbody>
+  
+            <ng-container *ngFor="let cust of customerservice.customers.slice(0, 20) let index = index" >
+              <tr>
+                <th scope="row" [ngClass]="{'dark-mode': darkMode}">{{index+1}}</th>
+                  <td [ngClass]="{'dark-mode': darkMode}">{{ cust.c_name }}</td>
+                  <td [ngClass]="{'dark-mode': darkMode}">{{ cust.c_address }}</td>
+                  <td [ngClass]="{'dark-mode': darkMode}">{{ cust.c_phone }}</td>
+              </tr>
+          </ng-container>
+          </tbody>
+        </table>  
+      </div>   
+      
+    </div>
+
+    <div class="customer-chart">
+
+      
+      <div class="card" [ngClass]="{'dark-mode': darkMode}">
+        <div class="Menu-option border rounded p-3 ">
+          <div class="in-decrement">
+            <button class="btn btn-secondary p-3 mr-2" (click)="decrement()">-</button>
+          {{ value }}
+          <button class="btn btn-primary p-3 mr-2" (click)="increment()">+</button>
+          </div>
+          
+          <div class="date-content">
+            <div class="date start-date mr-5">
+              <label for="start">{{ 'customerChart.startDate' | transloco }}</label>
+              <input type="date" [(ngModel)]="startdate" name="trip-start" value="2018-07-22" (change)="onStartDateChange($event)">
+            </div>
+            <span><strong>-</strong></span>
+            <div class="date end-date ml-10">
+              <label for="start">{{ 'customerChart.endDate' | transloco }}</label>
+              <input type="date" [(ngModel)]="enddate" name="trip-start" value="2018-07-22" (change)="onEndDateChange($event)"/>
+            </div>      
+          </div>
+          
+        </div>
+
+        <div class="card-body" [ngClass]="{'dark-mode': darkMode}">
+          <h5 class="card-title">{{ 'customerChart.bestCustomers' | transloco }}</h5>
+          <canvas id="bestCustomersChart"></canvas>
+        </div>
+      </div>
+
+      
+      <div class="card">
+        <div class="Menu-option border rounded p-3" [ngClass]="{'dark-mode': darkMode}">
+          <div class="in-decrement">
+            <button class="btn btn-secondary p-3 mr-2" (click)="decrement1()">-</button>
+            {{ value1 }}
+            <button class="btn btn-primary p-3 mr-2" (click)="increment1()">+</button>
+          </div>
+          <div class="date-content" [ngClass]="{'dark-mode': darkMode}">
+            <div class="date start-date mr-5">
+              <label for="start">{{ 'customerChart.startDate' | transloco }}</label>
+              <input type="date" [(ngModel)]="startdateOrd" name="trip-start" value="2018-07-22" (change)="onStartDateChangeOrd($event)">
+            </div>
+            <span><strong>-</strong></span>
+            <div class="date end-date ml-10">
+              <label for="start">{{ 'customerChart.endDate' | transloco }}</label>
+              <input type="date" [(ngModel)]="enddateOrd" name="trip-start" value="2018-07-22" (change)="onEndDateChangeOrd($event)"/>
+            </div>      
+          </div>
+        </div>       
+        
+        <div class="card-body" [ngClass]="{'dark-mode': darkMode}">
+          <h5 class="card-title">{{ 'customerChart.mostOrderedCustomers' | transloco }}</h5>
+          <canvas id="mostOrdCustomersChart"></canvas>
+        </div>
+      </div>  
+    </div>
+    
+  </div>

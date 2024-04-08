@@ -1,0 +1,14 @@
+{
+    "nav": {
+        "title": "GroupeN",
+        "dashboard": "Tableau de bord",
+        "products": "Produits",
+        "contact": "Contact"
+    },
+    "dashboard": {
+        "card1Title": "Revenu Total",
+        "card2Title": "Revenu du mois dernier",
+        "card3Title": "Revenu de l'année dernière",
+        "card4Title": "Revenu prévu pour l'année prochaine"
+    }
+}

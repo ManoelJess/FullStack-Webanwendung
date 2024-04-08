@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- app.component.html -->
+
+<div [ngClass]="{'dark-theme': theme$.value === 'dark', 'light-theme': theme$.value === 'light'}">
+    <!-- Your application content goes here -->
+  </div>
+  
+  <button (click)="toggleTheme()">Toggle Theme</button>
+  
+    
+    <p>settings works!</p>
+    
+    <div class="mySetting">
+        <div class="subSet">
+            <div class="set langage">
+                
+    <!-- <div class="card flex justify-content-center">
+        <p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" [showClear]="true" placeholder="Select a City"></p-dropdown>
+    </div> -->
+    <input type="checkbox" name="" id="">
+            </div>
+            
+            <div class="set theme">   
+                <div class="tilt"><p>langage</p></div>         
+                <div >
+                    <label for="options"></label>
+                    <select id="options" [(ngModel)]="selectedOption">
+                      <option *ngFor="let option of languages" [value]="option">{{ option }}</option>
+                    </select>
+                  </div>
+            </div>
+        </div>
+    
+        <div class="subSet">
+            <div class="set langage">3</div>
+            <div class="set langage">
+                <input type="range" min="3" max="30">
+            </div>
+        </div>
+        
+        
+    </div>
+    
+    
+      
+      
+</body>
+</html>
